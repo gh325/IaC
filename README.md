@@ -22,7 +22,7 @@ The internet to app request flow will be as follows:
 ## Structure:
 
 ```
-flask-ecs-alb
+hello-world-app
 ├── hello-world-app.py
 ├── Dockerfile
 ├── requirements.txt
@@ -62,10 +62,12 @@ Once you are in terraform dir you can run `terraform init`, `terraform plan`, an
 ```
 cd terraform
 terraform init
+terraform validate
 ```
 6. Apply all changes `terraform apply`
 7. Once the infrastructure is created, visit the AWS Management Console to view the ECS cluster and ALB.
 8. Visit the URL for the ALB to view the running Flask application.
+9. Destroy the changes using `terraform destroy`
 
 ## Conclusion
 This project demonstrates how to containerize a Flask application using Docker and deploy it on AWS Elastic Container Service with an Application Load Balancer, all provisioned using Terraform. This project can be used as a starting point for building more complex Flask applications on AWS.
